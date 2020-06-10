@@ -1,0 +1,26 @@
+{
+    "name": "funaffect/reauth",
+    "description": "Funaffect Laravel Packages - ReAuth",
+    "authors": [
+        {
+            "name": "M.Oobayashi",
+            "email": "m.oobayashi@funaffect.jp"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "laravel/framework": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funaffect\\LaravelReAuth\\": "app/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Funaffect\\LaravelReAuth\\Providers\\StartupServiceProvider"
+            ]
+        }
+    }
+}
