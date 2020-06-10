@@ -7,5 +7,5 @@ use Funaffect\LaravelReAuth\Contracts\ReAuth;
 
 class ReAuthController extends Controller
 {
-    use ReAuthTrait;
+    use ReAuth;
 }

@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/re-auth', 'ReAuthController@index')->name('reauth.index');
+Route::group(['prefix' => 're-auth', 'middleware' => 'web'], function(){
+    Route::get('/', '\Funaffect\LaravelReAuth\Http\Controllers\ReAuthController@index')->name('reauth.index');
+    
+    Route::get('/fallback', function(){
+        // return redirect(config('reauth.fallback'));
+        redirect('/');
+    })->name('reauth.fallback');
+});
 
-Route::get('/re-auth/fallback', function(){
-    redirect(config('reauth.fallback'));
-})->name('reauth.fallback');
 

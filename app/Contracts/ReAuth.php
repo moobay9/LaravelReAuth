@@ -14,7 +14,7 @@ trait ReAuth {
      */
     public function index(Request $request)
     {
-        // フラッシュセッションの中身が空っぽの場合は members へ遷移
+        // フラッシュセッションの中身が空っぽの場合は既定のトップへ遷移
         if ( ! $request->session()->get('re-auth'))
         {
             return redirect(config('reauth.fallback'));
@@ -22,7 +22,7 @@ trait ReAuth {
 
         // なければセッションを維持してビューを表示
         $request->session()->reflash();
-        return view('validpassword');
+        return view('reauth::validpassword');
     }
 
     /**

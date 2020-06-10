@@ -15,6 +15,7 @@ class StartupServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        // $this->app->singleton('Illuminate\Session\Middleware\StartSession');
     }
 
 
@@ -25,7 +26,7 @@ class StartupServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // dump('Funaffect Laravel Extension Package!');
+        // dump('Funaffect Laravel Reauth Package!');
 
         // Config
         $this->publishes([
