@@ -2,5 +2,5 @@
 
 return [
     'fallback' => '/', 
-    'reauth'   => '/reauth',
+    'reauth'   => '/re-auth',
 ];

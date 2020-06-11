@@ -3,7 +3,7 @@
 namespace Funaffect\LaravelReAuth\Contracts;
 
 use Illuminate\Http\Request;
-use Funaffect\LaravelReAuth\Http\Request\ReAuthRequest;
+use Funaffect\LaravelReAuth\Http\Requests\ReAuthRequest;
 
 trait ReAuth {
     /**
